@@ -18,17 +18,6 @@ public class Principal {
 		ControleHorarios controleHorarios = new ControleHorarios();
 		
 		cargaInicial.realizaCargaInicial(cursos, disciplinas, cursoDisciplinas);
-		
-		System.out.println("Horário       Segunda           Terça            Quarta            Quinta            Sexta");
-		System.out.println("---------------------------------------------------------------------------------------------");
-		for(CursoDisciplina horarios : cursoDisciplinas){
-			
-			CursoDisciplina cursoDiscTmp = controleHorarios.detectaConflitoHorario(cursoDisciplinas, horarios.getCurso(), horarios.getDisciplina(), horarios.getHorario(), horarios.getDiaSemana());
-			
-			if(cursoDiscTmp!=null){
-				System.out.println(horarios.getHorario());
-			}
-		}
 	}
 
 }
